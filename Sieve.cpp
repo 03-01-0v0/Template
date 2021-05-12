@@ -4,21 +4,43 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<int> Sive(int n)
+vector<int> Sieve(int n)
 {
-    vector<bool> c(n + 5, true);
+    vector<bool> mark(n + 5, true);
     vector<int> primes;
-    c[0] = c[1] = false;
+    mark[0] = mark[1] = false;
     for(int i = 2; i * i <= n; i++)
-        if(c[i])
+        if(mark[i])
             for(int j = i * i; j <= n; j += i)
-                c[j] = false;
+                mark[j] = false;
     for(int i = 2; i < n; i++)
-        if(c[i])
+        if(mark[i])
             primes.push_back(i);
     return primes;
 }
 
+vector<int> SegmentedSieve(int l, int r, vector<int> primes)
+{
+    if(l == 1)
+        ++l;
+    vector<bool> mark(r - l + 5, true);
+    vector<int> res;
+    for(int i = 0; primes.size() && primes[i] * primes[i] <= r; i++)
+    {
+        int base = (l / primes[i]) * primes[i];
+        if(base < l)
+            base += primes[i];
+        for(int j = base; j <= r; j += primes[i])
+        {
+            if(j != primes[i])
+                mark[j - l] = false;
+        }
+    }
+    for(int i = l; i <= r; i++)
+        if(mark[i - l])
+            res.push_back(i);
+    return res;
+}
 
 signed main()
 {
