@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Template.dir/Phi.cpp.obj"
   "CMakeFiles/Template.dir/Sieve.cpp.obj"
   "Template.exe"
   "Template.exe.manifest"

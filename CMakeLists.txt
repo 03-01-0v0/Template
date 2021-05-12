@@ -3,4 +3,4 @@ project(Template)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Template Phi.cpp Sieve.cpp)
+add_executable(Template Sieve.cpp)

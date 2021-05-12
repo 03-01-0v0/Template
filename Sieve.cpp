@@ -2,6 +2,7 @@
 // Created by HP on 5/12/2021.
 //
 #include <bits/stdc++.h>
+#define int long long
 using namespace std;
 
 vector<int> Sieve(int n)
@@ -47,6 +48,10 @@ signed main()
     ios::sync_with_stdio(0);
     cin.tie(0);cout.tie(0);
 
+    vector<int> primes = Sieve(1e6);
+    vector<int> res = SegmentedSieve(1e9, 1e9 + 20, primes);
+    for(auto e : res)
+        cout << e << " ";
 
     return 0;
 }

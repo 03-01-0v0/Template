@@ -142,33 +142,6 @@ Template/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Template.dir\build.make CMakeFiles/Template.dir/build
 .PHONY : Template/fast
 
-Phi.obj: Phi.cpp.obj
-
-.PHONY : Phi.obj
-
-# target to build an object file
-Phi.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Template.dir\build.make CMakeFiles/Template.dir/Phi.cpp.obj
-.PHONY : Phi.cpp.obj
-
-Phi.i: Phi.cpp.i
-
-.PHONY : Phi.i
-
-# target to preprocess a source file
-Phi.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Template.dir\build.make CMakeFiles/Template.dir/Phi.cpp.i
-.PHONY : Phi.cpp.i
-
-Phi.s: Phi.cpp.s
-
-.PHONY : Phi.s
-
-# target to generate assembly for a file
-Phi.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Template.dir\build.make CMakeFiles/Template.dir/Phi.cpp.s
-.PHONY : Phi.cpp.s
-
 Sieve.obj: Sieve.cpp.obj
 
 .PHONY : Sieve.obj
@@ -205,9 +178,6 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Template
-	@echo ... Phi.obj
-	@echo ... Phi.i
-	@echo ... Phi.s
 	@echo ... Sieve.obj
 	@echo ... Sieve.i
 	@echo ... Sieve.s

@@ -86,9 +86,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="E:/CLion/Template/Phi.cpp">
-			<Option target="Template"/>
-		</Unit>
 		<Unit filename="E:/CLion/Template/Sieve.cpp">
 			<Option target="Template"/>
 		</Unit>
