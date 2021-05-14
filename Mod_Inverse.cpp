@@ -27,15 +27,15 @@ const int MOD = 1e9 + 7;
 long long fpow(long long a, long long b, long long mod)
 {
     a %= mod;
-	long long res = 1;
-	while(b)
-	{
-		if(b & 1)
-			res = res * a % mod;
-		a = a * a % mod;
-		b >>= 1;
-	}
-	return res;
+    long long res = 1;
+    while(b)
+    {
+        if(b & 1)
+            res = res * a % mod;
+        a = a * a % mod;
+        b >>= 1;
+    }
+    return res;
 }
 
 long long extend_euclid(long long A, long long B, long long &x, long long &y)
@@ -75,12 +75,12 @@ vector<int> mod_iverse_array(int m)// Tinh tat ca mod inverse cua toan bo [1, m 
 
 long long add(long long A, long long B, long long mod)
 {
-    return (A % mod) + (B % mod) % mod;
+    return (A % mod + B % mod) % mod;
 }
 
 long long sub(long long A, long long B, long long mod)
 {
-    return (A % mod) - (B % mod) % mod;
+    return (A % mod - B % mod) % mod;
 }
 
 long long mul(long long A, long long B, long long mod)
