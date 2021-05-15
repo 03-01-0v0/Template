@@ -80,7 +80,7 @@ long long add(long long A, long long B, long long mod)
 
 long long sub(long long A, long long B, long long mod)
 {
-    return (A % mod - B % mod) % mod;
+    return ((A % mod - B % mod) % mod + mod) % mod;
 }
 
 long long mul(long long A, long long B, long long mod)
