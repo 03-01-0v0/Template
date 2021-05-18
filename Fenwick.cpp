@@ -8,12 +8,13 @@
  * 3 : return sum(l, r)
  */
 #include <bits/stdc++.h>
+#define int long long
 using namespace std;
 
 const int maxn = 2e5 + 5;
 
-int N;
-int A[maxn];
+int N, Q;
+int A[maxn], Diff[maxn];
 vector<int> bit1, bit2;
 
 void upd(vector<int> &Bit, int idx, int v)
@@ -41,7 +42,7 @@ void updRange(int l, int r, int v)
     upd(bit1, l, (N - l + 1) * v);
     upd(bit1, r + 1, -(N - r) * v);
     upd(bit2, l, v);
-    upd(bit2, r + 1, v);
+    upd(bit2, r + 1, -v);
 }
 
 int PrefixSum(int u)
@@ -59,9 +60,32 @@ signed main()
     ios::sync_with_stdio(0);
     cin.tie(0);cout.tie(0);
 
-    cin >> N;
+    cin >> N >> Q;
     for(int i = 1; i <= N; i++)
         cin >> A[i];
+    bit1.resize(maxn, 0);
+    bit2.resize(maxn, 0);
+    for(int i = 1; i <= N; i++)
+    {
+        Diff[i] = A[i] - A[i - 1];
+        upd(bit2, i, Diff[i]);
+        upd(bit1, i, (N - i + 1) * Diff[i]);
+    }
+    while(Q--)
+    {
+        int op, l, r, v;
+        cin >> op;
+        if(op == 1)
+        {
+            cin >> l >> r >> v;
+            updRange(l, r, v);
+        }
+        else
+        {
+            cin >> l >> r;
+            cout << RangeSum(l, r) << "\n";
+        }
+    }
 
     return 0;
 }
