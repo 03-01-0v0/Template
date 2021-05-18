@@ -22,7 +22,7 @@ void upd(vector<int> &Bit, int idx, int v)
     while(idx <= N)
     {
         Bit[idx] += v;
-        idx += (idx & (-idx));
+        idx += (idx & -idx);
     }
 }
 
@@ -32,7 +32,7 @@ int get(vector<int> Bit, int idx)
     while(idx)
     {
         sum += Bit[idx];
-        idx -= (idx & (-idx));
+        idx -= (idx & -idx);
     }
     return sum;
 }
