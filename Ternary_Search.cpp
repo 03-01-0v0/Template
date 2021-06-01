@@ -18,11 +18,10 @@ double f(double x)
 
 double ternary_search(double l, double r)
 {
-    double eps = 1e-9;
-    while(r - l > eps)
+    for(int i = 0; i < 100; i++)
     {
-        double m1 = l + (r - l) / 3;
-        double m2 = r - (r - l) / 3;
+        double m1 = (l + l + r) / 3;
+        double m2 = (r + r + l) / 3;
         if(f(m1) < f(m2))
             l = m1;
         else
