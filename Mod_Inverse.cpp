@@ -64,7 +64,7 @@ long long inverse(long long A, long long M)
 //    return fpow(A, M - 2, M);
 }
 
-vector<int> mod_iverse_array(int m)// Tinh tat ca mod inverse cua toan bo [1, m - 1] voi O(m) neu m la so nguyen to
+vector<int> mod_inverse_array(int m)// Tinh tat ca mod inverse cua toan bo [1, m - 1] voi O(m) neu m la so nguyen to
 {
     vector<int> r(m + 5);
     r[1] = 1;
