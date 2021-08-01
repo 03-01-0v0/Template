@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "E:/CLion/Template/Sieve.cpp" "E:/CLion/Template/cmake-build-debug/CMakeFiles/Template.dir/Sieve.cpp.obj"
+  "D:/CLion/Template/Z_function.cpp" "D:/CLion/Template/cmake-build-debug/CMakeFiles/Template.dir/Z_function.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

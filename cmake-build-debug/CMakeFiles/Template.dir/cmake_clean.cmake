@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Template.dir/Sieve.cpp.obj"
+  "CMakeFiles/Template.dir/Z_function.cpp.obj"
   "Template.exe"
   "Template.exe.manifest"
   "Template.pdb"

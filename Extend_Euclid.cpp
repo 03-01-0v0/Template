@@ -2,7 +2,10 @@
 // Created by HP on 5/12/2021.
 //
 #include <bits/stdc++.h>
+#define int long long
 using namespace std;
+
+const int mod = 1e9 + 7;
 
 int extend_euclid(int a, int b, int &x, int &y)
 {
@@ -25,7 +28,8 @@ signed main()
     cin.tie(0);cout.tie(0);
 
     int x, y;
-    int g = extend_euclid(55, 80, x, y);
+    int g = extend_euclid(6, mod, x, y);
+    x = (x % mod + mod) % mod;
     cout << g << " " << x << " " << y << endl;
 
     return 0;
