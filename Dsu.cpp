@@ -14,7 +14,7 @@ struct Dsu
 
     int get(int x)
     {
-        return (x == p[x] ? x : (p[x] == get(p[x])));
+        return (x == p[x] ? x : (p[x] = get(p[x])));
     }
 
     bool unite(int x, int y)
