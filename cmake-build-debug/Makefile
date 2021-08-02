@@ -141,6 +141,33 @@ Template/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Template.dir\build.make CMakeFiles/Template.dir/build
 .PHONY : Template/fast
 
+Dsu.obj: Dsu.cpp.obj
+
+.PHONY : Dsu.obj
+
+# target to build an object file
+Dsu.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Template.dir\build.make CMakeFiles/Template.dir/Dsu.cpp.obj
+.PHONY : Dsu.cpp.obj
+
+Dsu.i: Dsu.cpp.i
+
+.PHONY : Dsu.i
+
+# target to preprocess a source file
+Dsu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Template.dir\build.make CMakeFiles/Template.dir/Dsu.cpp.i
+.PHONY : Dsu.cpp.i
+
+Dsu.s: Dsu.cpp.s
+
+.PHONY : Dsu.s
+
+# target to generate assembly for a file
+Dsu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Template.dir\build.make CMakeFiles/Template.dir/Dsu.cpp.s
+.PHONY : Dsu.cpp.s
+
 Z_function.obj: Z_function.cpp.obj
 
 .PHONY : Z_function.obj
@@ -177,6 +204,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Template
+	@echo ... Dsu.obj
+	@echo ... Dsu.i
+	@echo ... Dsu.s
 	@echo ... Z_function.obj
 	@echo ... Z_function.i
 	@echo ... Z_function.s

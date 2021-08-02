@@ -12,7 +12,6 @@ vector<int> z_function(string s)
             x = i, y = i + z[i], ++z[i];
     }
     return z;
-
 }
 
 signed main()

@@ -82,6 +82,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/CLion/Template/Dsu.cpp">
+			<Option target="Template"/>
+		</Unit>
 		<Unit filename="D:/CLion/Template/Z_function.cpp">
 			<Option target="Template"/>
 		</Unit>

@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Template.dir/Dsu.cpp.obj"
   "CMakeFiles/Template.dir/Z_function.cpp.obj"
   "Template.exe"
   "Template.exe.manifest"
