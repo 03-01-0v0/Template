@@ -4,12 +4,12 @@ using namespace std;
 struct Dsu
 {
     int n;
-    vector<int> p, rank;
+    vector<int> p, sz;
 
     Dsu(int n) : n(n)
     {
         p.resize(n + 5);
-        rank.resize(n + 5);
+        sz.resize(n + 5, 1);
         iota(p.begin(), p.end(), 0);
     }
 
@@ -24,9 +24,9 @@ struct Dsu
         y = get(y);
         if (x != y)
         {
-            if (rank[x] > rank[y]) swap(x, y);
+            if (sz[x] > sz[y]) swap(x, y);
             p[x] = y;
-            if (rank[x] == rank[y]) ++rank[y];
+            sz[y] += sz[x];
             return true;
         }
         return false;
