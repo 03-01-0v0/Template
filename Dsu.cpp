@@ -26,7 +26,7 @@ struct Dsu
         {
             if (rank[x] > rank[y]) swap(x, y);
             p[x] = y;
-            if (rank[x] == rank[y]) ++rank[x];
+            if (rank[x] == rank[y]) ++rank[y];
             return true;
         }
         return false;
