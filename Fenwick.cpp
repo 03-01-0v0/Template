@@ -21,7 +21,7 @@ struct fenwick
 {
     int N;
     vector<int> Bit;
-    fenwick()
+    fenwick() {}
     fenwick(int N)
     {
         this -> N = N;
