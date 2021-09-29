@@ -17,6 +17,40 @@ int N, Q;
 int A[maxn], Diff[maxn];
 vector<int> bit1, bit2;
 
+struct fenwick
+{
+    int N;
+    vector<int> Bit;
+    fenwick()
+    fenwick(int N)
+    {
+        this -> N = N;
+        this -> Bit.resize(N + 5, 0);
+    }
+    void upd(int idx, int v)
+    {
+        while (idx <= N)
+        {
+            Bit[idx] += v;
+            idx += (idx & -idx);
+        }
+    }
+    int get(int idx)
+    {
+        int sum = 0;
+        while (idx)
+        {
+            sum += Bit[idx];
+            idx -= (idx & -idx);
+        }
+        return sum;
+    }
+    int rangeSum(int l, int r)
+    {
+        return get(r) - get(l - 1);
+    }
+};
+
 void upd(vector<int> &Bit, int idx, int v)
 {
     while(idx <= N)
